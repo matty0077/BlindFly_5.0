@@ -1,0 +1,17 @@
+sudo curl -kL dexterindustries.com/update_grovepi | bash
+
+
+sudo reboot
+
+#########update
+cd /home/pi/Dexter/GrovePi
+sudo git fetch origin
+sudo git reset --hard
+sudo git merge origin/master
+
+########
+cd /home/pi/Dexter/GrovePi/Firmware
+sudo chmod +x grovepi_firmware_update.sh
+sudo ./grovepi_firmware_update.sh
+
+
